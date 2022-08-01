@@ -1,0 +1,25 @@
+{
+    "default_locale": "en",
+    "autostart_path": "~/.config/autostart/freedomos.desktop",
+    "data_path": "/usr/share/freedomos/data/",
+    "desktop_path": "/usr/share/applications/freedomos.desktop",
+    "installer_path": "/usr/bin/calamares",
+    "live_path": "/run/miso/bootmnt/freedomos",
+    "locale_path": "/usr/share/locale/",
+    "logo_path": "/usr/share/pixmaps/FreedomOS.png",
+    "save_path": "~/.config/freedomos.json",
+    "ui_path": "/usr/share/freedomos/ui/freedomos.glade",
+    "style_path": "/usr/share/freedomos/ui/style.css",
+    "urls": {
+        "development": "",
+        "software": "",
+        "donate": "",
+        "facebook": "",
+        "forum": "",
+        "telegram": "",
+        "mailling": "",
+        "reddit": "",
+        "twitter": "",
+        "wiki": ""
+    }
+}
