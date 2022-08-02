@@ -18,10 +18,10 @@ if DEBUG:
 else:
     user = "liveuser"
 
-Settings = home + "/.config/arcolinux-welcome-app/settings.conf"
-Skel_Settings = "/etc/skel/.config/arcolinux-welcome-app/settings.conf"
-dot_desktop = "/usr/share/applications/arcolinux-welcome-app.desktop"
-autostart = home + "/.config/autostart/arcolinux-welcome-app.desktop"
+Settings = home + "/.config/freedomos-welcome/settings.conf"
+Skel_Settings = "/etc/skel/.config/freedomos-welcome/settings.conf"
+dot_desktop = "/usr/share/applications/freedomos-welcome.desktop"
+autostart = home + "/.config/autostart/freedomos-welcome.desktop"
 
 
 def GUI(self, Gtk, GdkPixbuf):
