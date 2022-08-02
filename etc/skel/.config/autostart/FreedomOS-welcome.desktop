@@ -1,9 +1,9 @@
 [Desktop Entry]
-Name=ArcoLinux Welcome
-GenericName=ArcoLinux Welcome
-X-GNOME-FullName=ArcoLinux Welcome
-Comment=Welcome Application for ArcoLinux Installs
-Exec=/usr/local/bin/arcolinux-welcome-app
+Name=FreedomOS Welcome
+GenericName=FreedomOS Welcome
+X-GNOME-FullName=FreedomOS Welcome
+Comment=Welcome Application for FreedomOS Welcome
+Exec=/usr/local/bin/freedomos-welcome
 Icon=/usr/share/icons/hicolor/scalable/apps/freedomos-welcome.png
 Terminal=false
 Type=Application
