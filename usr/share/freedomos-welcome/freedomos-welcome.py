@@ -6,7 +6,7 @@ import gi
 import os
 import GUI
 import conflicts
-import wnck
+#import wnck
 import subprocess
 import threading
 import webbrowser
