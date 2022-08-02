@@ -1,5 +1,6 @@
 # =================================================================
-# =          Authors: Brad Heffernan & Erik Dubois                =
+# =          Authors: Brad Heffernan & Erik Dubois    
+#        
 # =================================================================
 
 import os
@@ -190,10 +191,10 @@ def GUI(self, Gtk, GdkPixbuf):
     lblpassword.set_text("Pass:")
 
     lblusr = Gtk.Label(xalign=0)
-    lblusr.set_text("liveuser  |")
+    lblusr.set_text("live")
 
     lblpass = Gtk.Label(xalign=0)
-    lblpass.set_markup("<i>No Password</i>")
+    lblpass.set_markup("live")
 
     hboxUser = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
 
