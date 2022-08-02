@@ -16,7 +16,7 @@ username = getpass.getuser()
 if DEBUG:
     user = username
 else:
-    user = "liveuser"
+    user = "live"
 
 Settings = home + "/.config/freedomos-welcome/settings.conf"
 Skel_Settings = "/etc/skel/.config/freedomos-welcome/settings.conf"
