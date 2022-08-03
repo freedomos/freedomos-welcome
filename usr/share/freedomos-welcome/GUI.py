@@ -1,6 +1,6 @@
 # =================================================================
-# =          Authors: Brad Heffernan & Erik Dubois    
-#        
+# =          Authors: Brad Heffernan & Erik Dubois
+#
 # =================================================================
 
 import os
@@ -114,17 +114,10 @@ def GUI(self, Gtk, GdkPixbuf):
 
     button2 = Gtk.Button(label="")
     button2_label = button2.get_child()
-    button2_label.set_markup("<span size='large'><b>Base Installation</b></span>")
-
+    button2_label.set_markup("<span size='large'><b>Install FreedomOS</b></span>")
     button2.connect("clicked", self.on_ai_clicked)
     button2.set_size_request(0, 80)
 
-    buttonca = Gtk.Button(label="")
-    buttonca_label = buttonca.get_child()
-    buttonca_label.set_markup("<span size='large'><b>Advanced Installation</b></span>")
-
-    buttonca.connect("clicked", self.on_aica_clicked)
-    buttonca.set_size_request(0, 80)
 
 
     self.button8 = Gtk.Button(label="")
@@ -151,8 +144,7 @@ def GUI(self, Gtk, GdkPixbuf):
         grid.attach(self.button8, 2, 0, 2, 2)
         #grid.attach(button13, 2, 0, 2, 2)
         grid.attach(button1, 2, 2, 2, 2)
-        grid.attach(button2, 1, 4, 2, 2)
-        grid.attach(buttonca, 3, 4, 2, 2)
+        grid.attach(button2, 2, 4, 2, 2)
         grid.set_column_homogeneous(True)
         grid.set_row_homogeneous(True)
     else:

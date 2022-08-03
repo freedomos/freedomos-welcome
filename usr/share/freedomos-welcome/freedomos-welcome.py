@@ -51,7 +51,6 @@ class Main(Gtk.Window):
         print("Clicked")
 
     def on_ai_clicked(self, widget):
-        t.start()
         subprocess.Popen(["/usr/bin/calamares_polkit", "-d"], shell=False)
 
 
