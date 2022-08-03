@@ -52,11 +52,8 @@ class Main(Gtk.Window):
 
     def on_ai_clicked(self, widget):
         t.start()
-        subprocess.Popen(["sh -c pkexec calamares"], shell=False)
+        subprocess.Popen(["calamares"], shell=False)
 
-    def on_aica_clicked(self, widget):
-        t.start()
-        subprocess.Popen(["sh -c pkexec calamares"], shell=False)
 
     def on_gp_clicked(self, widget):
         t = threading.Thread(target=self.run_app, args=(["/usr/bin/gparted"],))
