@@ -80,21 +80,20 @@ def GUI(self, Gtk, GdkPixbuf):
     if username == user:
 
         label2.set_markup(
-            "We advise to clean the computer with <b>Gparted</b> before installing.\n" +
-            "During the Calamares installation many options will be open to you. You have the freedom of choice.\n" +  # noqa
-            "We communicate with our community via a diversity of social media." +  # noqa
-            "Do join us to learn the latest news, ask questions or for casual talk.\n" +  # noqa
-            "<b>Telegram</b> is for chitchat - <b>Discord</b> is for assistance.\n" +  # noqa
-            "We have a <b>forum</b> for the longer and more technical questions.\n")
+            "Thank you for choosing to use <b>FreedomOS</b>.\n" +
+            "Come and join out fourms and be the first to find out about\n" +  # noqa
+            "updates and new features. pop over to our support page if you\n" +  # noqa
+            "require any help.\n" +  # noqa
+            "We are currently using a basic Calamares installer but this will\n" +  # noqa
+            "have more features as we continue to grow.\n")
         label_warning.set_markup(
-            "\n<span size='x-large'><b>Use the Base Installation\n" + # noqa
-            "if the Advanced Installation fails</b></span>\n")  # noqa
+            "\n<span size='x-large'><b>Live Session, Nothing will be saved.")
     else:
-        label2.set_markup("The links below will get you started on FreedomOS. We communicate with our community via a diversity of social media.\n"
-                          "Do join us to learn the latest news, ask questions or for casual talk.\n" +  # noqa
-                          "<b>Telegram</b> is for chitchat - <b>Discord</b> is for assistance.\n" +  # noqa
-                          "We have a <b>forum</b> for the longer and more technical questions.\n" +  # noqa
-                          "Learn, have fun and enjoy.")
+        label2.set_markup(
+            "The links below will get you started on <b>FreedomOS</b>.\n"
+            "Come and join out fourms and be the first to find out about\n" +  # noqa
+            "updates and new features. pop over to our support page if you\n" +  # noqa
+            "require any help.\n")
 
     hbox4.set_center_widget(label2)
     hbox1.pack_start(label, False, False, 0)
@@ -122,15 +121,11 @@ def GUI(self, Gtk, GdkPixbuf):
 
     self.button8 = Gtk.Button(label="")
     button8_label = self.button8.get_child()
-    button8_label.set_markup("<span size='large'><b>Update Arch Linux mirrors</b></span>")
+    button8_label.set_markup("<span size='large'><b>Update Repo</b></span>")
     self.button8.connect("clicked", self.on_mirror_clicked)
     self.button8.set_size_request(420, 70)
 
-    self.buttonatt = Gtk.Button(label="")
-    buttonatt_label = self.buttonatt.get_child()
-    buttonatt_label.set_markup("<span size='large'><b>Launch Arch Linux Tweak Tool</b></span>")
-    self.buttonatt.connect("clicked", self.on_buttonatt_clicked)
-    self.buttonatt.set_size_request(420, 70)
+
 
     self.buttonpamac = Gtk.Button(label="")
     buttonpamac_label = self.buttonpamac.get_child()
@@ -141,7 +136,7 @@ def GUI(self, Gtk, GdkPixbuf):
     # grid.add(button1)
     if username == user:
         grid = Gtk.Grid()
-        grid.attach(self.button8, 2, 0, 2, 2)
+        #grid.attach(self.button8, 2, 0, 2, 2)
         #grid.attach(button13, 2, 0, 2, 2)
         grid.attach(button1, 2, 2, 2, 2)
         grid.attach(button2, 2, 4, 2, 2)
@@ -149,12 +144,12 @@ def GUI(self, Gtk, GdkPixbuf):
         grid.set_row_homogeneous(True)
     else:
         grid = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        self.button8.set_size_request(300, 70)
-        self.buttonatt.set_size_request(300, 70)
+        #self.button8.set_size_request(300, 70)
+        #self.buttonatt.set_size_request(300, 70)
         self.buttonpamac.set_size_request(300, 70)
         grid.pack_start(self.buttonpamac, True, False, 0)
-        grid.pack_start(self.buttonatt, True, False, 0)
-        grid.pack_start(self.button8, True, False, 0)
+        #grid.pack_start(self.buttonatt, True, False, 0)
+        #grid.pack_start(self.button8, True, False, 0)
     # grid.set_row_homogeneous(True)
 
     # ======================================================================
@@ -201,14 +196,14 @@ def GUI(self, Gtk, GdkPixbuf):
     # ======================================================================
 
     # change this one every year
-    button3 = Gtk.Button(label="Release info")
+    button3 = Gtk.Button(label="Website")
     button3.connect("clicked", self.on_link_clicked,
-                    "https://FreedomOS.info/releases-2022/")
+                    "https://freedomos.github.io/")
     button3.set_size_request(180, 50)
 
-    button4 = Gtk.Button(label="Choose your project")
+    button4 = Gtk.Button(label="Github")
     button4.connect("clicked", self.on_link_clicked,
-                    "https://FreedomOS.info/choose-your-project/")
+                    "https://github.com/freedomos")
     button4.set_size_request(180, 50)
 
     button5 = Gtk.Button(label="Core info")
@@ -216,14 +211,14 @@ def GUI(self, Gtk, GdkPixbuf):
                     "https://FreedomOS.info/FreedomOS-editions/")
     button5.set_size_request(180, 50)
 
-    button6 = Gtk.Button(label="Fast track")
+    button6 = Gtk.Button(label="Wiki")
     button6.connect("clicked", self.on_link_clicked,
-                    "https://FreedomOS.info/fast-track/")
+                    "https://sourceforge.net/p/freedomoslinux/wiki/Home/")
     button6.set_size_request(180, 50)
 
     button7 = Gtk.Button(label="Forum")
     button7.connect("clicked", self.on_link_clicked,
-                    "http://FreedomOSforum.com/")
+                    "https://sourceforge.net/p/freedomoslinux/discussion/")
     button7.set_size_request(180, 50)
 
     button70 = Gtk.Button(label="Screen resolution")
@@ -241,33 +236,33 @@ def GUI(self, Gtk, GdkPixbuf):
     hbox2.pack_start(button7, True, True, 0)
     hbox2.pack_start(button70, True, True, 0)
 
-    button8 = Gtk.Button(label="")
-    button8_label = button8.get_child()
-    button8_label.set_markup("<b>Donate</b>")
-    button8.connect("clicked", self.on_link_clicked,
-                    "https://FreedomOS.info/donation/")
+    #button8 = Gtk.Button(label="")
+    #button8_label = button8.get_child()
+    #button8_label.set_markup("<b>P-holder</b>")
+    #button8.connect("clicked", self.on_link_clicked,
+    #                "")
 
-    button9 = Gtk.Button(label="Get Involved - Betatester")
+    button9 = Gtk.Button(label="Become a Beta Tester")
     button9.connect("clicked", self.on_link_clicked,
-                    "https://FreedomOS.info/looking-for-betatesters/")
+                    "https://sourceforge.net/p/freedomoslinux/discussion/beta/")
 
-    button10 = Gtk.Button(label="Get Involved - AAG")
+    button10 = Gtk.Button(label="Get Involved - Github")
     button10.connect("clicked", self.on_link_clicked,
-                     "https://www.FreedomOS.info/joining-the-FreedomOS-auditing-group/")
+                     "https://github.com/freedomos")
 
-    button11 = Gtk.Button(label="Youtube FreedomOS Channel")
-    button11.connect("clicked", self.on_link_clicked,
-                     "https://www.youtube.com/erikdubois")
+    #button11 = Gtk.Button(label="Youtube FreedomOS Channel")
+    #button11.connect("clicked", self.on_link_clicked,
+    #                 "https://www.youtube.com/erikdubois")
 
     button12 = Gtk.Button(label="Quit")
     button12.set_size_request(200, 50)
     button12.connect("clicked", Gtk.main_quit)
     #button12.set_tooltip_markup("Quit the FreedomOS Welcome App")
 
-    hbox5.pack_start(button8, True, True, 0)
+    #hbox5.pack_start(button8, True, True, 0)
     hbox5.pack_start(button9, True, True, 0)
     hbox5.pack_start(button10, True, True, 0)
-    hbox5.pack_start(button11, True, True, 0)
+    #hbox5.pack_start(button11, True, True, 0)
     hbox5.pack_start(button12, True, True, 0)
 
 
@@ -282,128 +277,7 @@ def GUI(self, Gtk, GdkPixbuf):
     check.set_active(autostart)
     hbox3.pack_end(check, False, False, 0)
 
-    # ======================================================================
-    #                   SOCIAL LINKS
-    # ======================================================================
-    fbE = Gtk.EventBox()
-    tE = Gtk.EventBox()
-    meE = Gtk.EventBox()
-    inE = Gtk.EventBox()
-    liE = Gtk.EventBox()
-    pE = Gtk.EventBox()
-    yE = Gtk.EventBox()
-    dE = Gtk.EventBox()
-    tgE = Gtk.EventBox()
-    elE = Gtk.EventBox()
 
-    pbfb = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/facebook.png'), 28, 28)
-    fbimage = Gtk.Image().new_from_pixbuf(pbfb)
-
-    pbt = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/twitter.png'), 28, 28)
-    timage = Gtk.Image().new_from_pixbuf(pbt)
-
-    pbme = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/mewe.png'), 23, 23)
-    meimage = Gtk.Image().new_from_pixbuf(pbme)
-
-    pbin = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/insta.png'), 28, 28)
-    inimage = Gtk.Image().new_from_pixbuf(pbin)
-
-    pbli = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/linkedin.png'), 28, 28)
-    liimage = Gtk.Image().new_from_pixbuf(pbli)
-
-    pbp = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/patreon.png'), 28, 28)
-    pimage = Gtk.Image().new_from_pixbuf(pbp)
-
-    pby = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/youtube.png'), 28, 28)
-    yimage = Gtk.Image().new_from_pixbuf(pby)
-
-    pbd = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/discord.png'), 28, 28)
-    dimage = Gtk.Image().new_from_pixbuf(pbd)
-
-    pbtg = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/tg.png'), 28, 28)
-    tgimage = Gtk.Image().new_from_pixbuf(pbtg)
-
-    pbel = GdkPixbuf.Pixbuf().new_from_file_at_size(
-        os.path.join(base_dir, 'images/element.png'), 28, 28)
-    elimage = Gtk.Image().new_from_pixbuf(pbel)
-
-    fbE.add(fbimage)
-    tE.add(timage)
-    meE.add(meimage)
-    inE.add(inimage)
-    liE.add(liimage)
-    pE.add(pimage)
-    yE.add(yimage)
-    dE.add(dimage)
-    tgE.add(tgimage)
-    elE.add(elimage)
-
-    fbE.connect("button_press_event", self.on_social_clicked,
-                "https://www.facebook.com/groups/FreedomOS")
-    tE.connect("button_press_event", self.on_social_clicked,
-               "https://twitter.com/FreedomOS")
-    meE.connect("button_press_event", self.on_social_clicked,
-                "https://mewe.com/group/5bbc4577a40f3002b313671d")
-    inE.connect("button_press_event", self.on_social_clicked,
-                "https://www.instagram.com/FreedomOS/")
-    liE.connect("button_press_event", self.on_social_clicked,
-                "https://www.linkedin.com/in/FreedomOS/")
-    pE.connect("button_press_event", self.on_social_clicked,
-               "https://www.patreon.com/FreedomOS")
-    yE.connect("button_press_event", self.on_social_clicked,
-               "https://youtube.com/c/erikdubois")
-    dE.connect("button_press_event", self.on_social_clicked,
-               "https://discordapp.com/invite/R2amEEz")
-    tgE.connect("button_press_event", self.on_social_clicked,
-                "https://t.me/FreedomOS_d_b")
-    elE.connect("button_press_event", self.on_social_clicked,
-                "https://app.element.io/#/room/!jUDkosOsuDbGWNzKYl:matrix.org")
-
-    fbE.set_property("has-tooltip", True)
-    tE.set_property("has-tooltip", True)
-    meE.set_property("has-tooltip", True)
-    inE.set_property("has-tooltip", True)
-    liE.set_property("has-tooltip", True)
-    pE.set_property("has-tooltip", True)
-    yE.set_property("has-tooltip", True)
-    dE.set_property("has-tooltip", True)
-    tgE.set_property("has-tooltip", True)
-    elE.set_property("has-tooltip", True)
-
-    fbE.connect("query-tooltip", self.tooltip_callback, "Facebook")
-    tE.connect("query-tooltip", self.tooltip_callback, "Twitter")
-    meE.connect("query-tooltip", self.tooltip_callback, "Mewe")
-    inE.connect("query-tooltip", self.tooltip_callback, "Instagram")
-    liE.connect("query-tooltip", self.tooltip_callback, "LinkedIn")
-    pE.connect("query-tooltip", self.tooltip_callback, "Patreon")
-    yE.connect("query-tooltip", self.tooltip_callback, "Youtube")
-    dE.connect("query-tooltip", self.tooltip_callback, "Discord")
-    tgE.connect("query-tooltip", self.tooltip_callback, "Telegram")
-    elE.connect("query-tooltip", self.tooltip_callback, "Element-Matrix")
-
-    hbox3.pack_start(fbE, False, False, 0)
-    hbox3.pack_start(tE, False, False, 0)
-    hbox3.pack_start(meE, False, False, 0)
-    hbox3.pack_start(inE, False, False, 0)
-    hbox3.pack_start(liE, False, False, 0)
-    hbox3.pack_start(elE, False, False, 0)
-
-    hbox6.pack_start(pE, False, False, 50)
-    hbox6.pack_start(yE, False, False, 0)
-    hbox6.pack_start(dE, False, False, 0)
-    hbox6.pack_start(tgE, False, False, 0)
-    if username == user:
-        hbox3.pack_start(hboxUser, True, False, 0)
-    hbox3.pack_start(hbox6, True, False, 0)
 
     # ======================================================================
     #                   Start FreedomOS Tweak Tool
