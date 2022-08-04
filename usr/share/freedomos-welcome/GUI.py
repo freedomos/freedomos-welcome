@@ -81,7 +81,7 @@ def GUI(self, Gtk, GdkPixbuf):
 
         label2.set_markup(
             "Thank you for choosing to use <b>FreedomOS</b>.\n" +
-            "Come and join out fourms and be the first to find out about\n" +  # noqa
+            "Come and join our fourms and be the first to find out about\n" +  # noqa
             "updates and new features. pop over to our support page if you\n" +  # noqa
             "require any help.\n" +  # noqa
             "We are currently using a basic Calamares installer but this will\n" +  # noqa
