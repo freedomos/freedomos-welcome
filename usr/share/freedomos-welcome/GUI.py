@@ -198,7 +198,7 @@ def GUI(self, Gtk, GdkPixbuf):
     # change this one every year
     button3 = Gtk.Button(label="Website")
     button3.connect("clicked", self.on_link_clicked,
-                    "https://freedomos.github.io/")
+                    "https://freedomos.co.uk/")
     button3.set_size_request(180, 50)
 
     button4 = Gtk.Button(label="Github")
@@ -206,14 +206,14 @@ def GUI(self, Gtk, GdkPixbuf):
                     "https://github.com/freedomos")
     button4.set_size_request(180, 50)
 
-    button5 = Gtk.Button(label="Core info")
-    button5.connect("clicked", self.on_link_clicked,
-                    "https://FreedomOS.info/FreedomOS-editions/")
-    button5.set_size_request(180, 50)
+    #button5 = Gtk.Button(label="Core info")
+    #button5.connect("clicked", self.on_link_clicked,
+    #                "https://FreedomOS.info/FreedomOS-editions/")
+    #button5.set_size_request(180, 50)
 
     button6 = Gtk.Button(label="Wiki")
     button6.connect("clicked", self.on_link_clicked,
-                    "https://sourceforge.net/p/freedomoslinux/wiki/Home/")
+                    "https://freedomos-docs.readthedocs.io/en/latest/")
     button6.set_size_request(180, 50)
 
     button7 = Gtk.Button(label="Forum")
@@ -231,7 +231,7 @@ def GUI(self, Gtk, GdkPixbuf):
 
     hbox2.pack_start(button3, True, True, 0)
     hbox2.pack_start(button4, True, True, 0)
-    hbox2.pack_start(button5, True, True, 0)
+    #hbox2.pack_start(button5, True, True, 0)
     hbox2.pack_start(button6, True, True, 0)
     hbox2.pack_start(button7, True, True, 0)
     hbox2.pack_start(button70, True, True, 0)
@@ -250,9 +250,9 @@ def GUI(self, Gtk, GdkPixbuf):
     button10.connect("clicked", self.on_link_clicked,
                      "https://github.com/freedomos")
 
-    #button11 = Gtk.Button(label="Youtube FreedomOS Channel")
-    #button11.connect("clicked", self.on_link_clicked,
-    #                 "https://www.youtube.com/erikdubois")
+    button11 = Gtk.Button(label="Donate")
+    button11.connect("clicked", self.on_link_clicked,
+                 "https://freedomos.co.uk/donate")
 
     button12 = Gtk.Button(label="Quit")
     button12.set_size_request(200, 50)
@@ -262,7 +262,7 @@ def GUI(self, Gtk, GdkPixbuf):
     #hbox5.pack_start(button8, True, True, 0)
     hbox5.pack_start(button9, True, True, 0)
     hbox5.pack_start(button10, True, True, 0)
-    #hbox5.pack_start(button11, True, True, 0)
+    hbox5.pack_start(button11, True, True, 0)
     hbox5.pack_start(button12, True, True, 0)
 
 
