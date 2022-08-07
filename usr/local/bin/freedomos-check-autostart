@@ -3,5 +3,5 @@ source ~/.config/freedomos-welcome/settings.conf
 
 
 if [[ $autostart = True ]]; then
-  /usr/local/bin/freedomos-welcome
+  /usr/local/bin/freedomos-welcome && exit 1 
 fi
