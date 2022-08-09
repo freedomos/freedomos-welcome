@@ -121,7 +121,7 @@ def GUI(self, Gtk, GdkPixbuf):
 
     self.button8 = Gtk.Button(label="")
     button8_label = self.button8.get_child()
-    button8_label.set_markup("<span size='large'><b>Update Repo</b></span>")
+    button8_label.set_markup("<span size='large'><b>Check for updates</b></span>")
     self.button8.connect("clicked", self.on_mirror_clicked)
     self.button8.set_size_request(420, 70)
 
@@ -136,7 +136,7 @@ def GUI(self, Gtk, GdkPixbuf):
     # grid.add(button1)
     if username == user:
         grid = Gtk.Grid()
-        #grid.attach(self.button8, 2, 0, 2, 2)
+        grid.attach(self.button8, 2, 0, 2, 2)
         #grid.attach(button13, 2, 0, 2, 2)
         grid.attach(button1, 2, 2, 2, 2)
         grid.attach(button2, 2, 4, 2, 2)
@@ -144,12 +144,12 @@ def GUI(self, Gtk, GdkPixbuf):
         grid.set_row_homogeneous(True)
     else:
         grid = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        #self.button8.set_size_request(300, 70)
+        self.button8.set_size_request(300, 70)
         #self.buttonatt.set_size_request(300, 70)
         self.buttonpamac.set_size_request(300, 70)
         grid.pack_start(self.buttonpamac, True, False, 0)
         #grid.pack_start(self.buttonatt, True, False, 0)
-        #grid.pack_start(self.button8, True, False, 0)
+        grid.pack_start(self.button8, True, False, 0)
     # grid.set_row_homogeneous(True)
 
     # ======================================================================

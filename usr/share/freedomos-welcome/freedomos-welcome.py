@@ -43,9 +43,8 @@ class Main(Gtk.Window):
             t.start()
 
     def on_mirror_clicked(self, widget):
-        t = threading.Thread(target=self.mirror_update)
-        t.daemon = True
-        t.start()
+        subprocess.Popen(["exec bash update"], shell=True)
+
 
     def on_update_clicked(self, widget):
         print("Clicked")
