@@ -43,7 +43,7 @@ class Main(Gtk.Window):
             t.start()
 
     def on_mirror_clicked(self, widget):
-        subprocess.Popen(["exec bash update"], shell=True)
+     subprocess.Popen(["konsole -e bash update"], shell=True)
 
 
     def on_update_clicked(self, widget):
