@@ -1,7 +1,8 @@
 # =================================================================
-# =          Authors: Brad Heffernan & Erik Dubois                =
+#
+#
+# =     Authors: Brad Heffernan & Erik Dubois & Frazer Grant      =
 # =================================================================
-
 import gi
 import os
 gi.require_version('Gtk', '3.0')

@@ -1,19 +1,18 @@
 # =================================================================
-# =          Authors: Brad Heffernan & Erik Dubois
 #
+#
+# =     Authors: Brad Heffernan & Erik Dubois & Frazer Grant      =
 # =================================================================
-
 import os
 import getpass
 from os.path import expanduser
-
 DEBUG = False
 #DEBUG = True
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
 home = expanduser("~")
 username = getpass.getuser()
-
+welcomeuser = f"Welcome {username}"
 if DEBUG:
     user = username
 else:
@@ -54,6 +53,8 @@ def GUI(self, Gtk, GdkPixbuf):
     infoE.set_property("has-tooltip", True)
     infoE.connect("query-tooltip", self.tooltip_callback, "Conflicts Info")
 
+
+
     # ======================================================================
     #                   WELCOME LABEL
     # ======================================================================
@@ -65,9 +66,9 @@ def GUI(self, Gtk, GdkPixbuf):
         "<big>Welcome to <b>FreedomOS</b></big>")
     label.set_line_wrap(True)
 
-    # pixbuf = GdkPixbuf.Pixbuf().new_from_file_at_size(
-    #     os.path.join(base_dir, 'images/FreedomOS-one-liner.png'), 145, 145)
-    # image = Gtk.Image().new_from_pixbuf(pixbuf)
+    pixbuf = GdkPixbuf.Pixbuf().new_from_file_at_size(
+        os.path.join(base_dir, 'images/FreedomOS-one-liner.png'), 145, 145)
+    image = Gtk.Image().new_from_pixbuf(pixbuf)
 
     label2 = Gtk.Label(xalign=0)
     label2.set_justify(Gtk.Justification.CENTER)
@@ -89,8 +90,8 @@ def GUI(self, Gtk, GdkPixbuf):
         label_warning.set_markup(
             "\n<span size='x-large'><b>Live Session, Nothing will be saved.")
     else:
-        label2.set_markup(
-            "The links below will get you started on <b>FreedomOS</b>.\n"
+        label2.set_markup (
+                    "The links below will get you started on <b>FreedomOS</b>.\n"
             "Come and join out fourms and be the first to find out about\n" +  # noqa
             "updates and new features. pop over to our support page if you\n" +  # noqa
             "require any help.\n")
@@ -105,10 +106,13 @@ def GUI(self, Gtk, GdkPixbuf):
     #                   MAIN BUTTONS
     # ======================================================================
 
+
     button1 = Gtk.Button(label="")
     button1_label = button1.get_child()
-    button1_label.set_markup("<span size='large'><b>Run GParted</b></span>")
-    button1.connect("clicked", self.on_gp_clicked)
+    button1_label.set_markup("<span size='large'><b>Install Guide</b></span>")
+    #button1.connect("clicked", self.on_gp_clicked)
+    button1.connect("clicked", self.on_link_clicked,
+                    "https://freedomos-docs.readthedocs.io/en/latest/Install.html")
     button1.set_size_request(0, 80)
 
     button2 = Gtk.Button(label="")
@@ -125,12 +129,13 @@ def GUI(self, Gtk, GdkPixbuf):
     self.button8.connect("clicked", self.on_mirror_clicked)
     self.button8.set_size_request(420, 70)
 
-
+   # RoundedButton(root, text="Some Text", border_radius=2, padding=4, command=some_function, color="#cda989")
 
     self.buttonpamac = Gtk.Button(label="")
     buttonpamac_label = self.buttonpamac.get_child()
     buttonpamac_label.set_markup("<span size='large'><b>Install software</b></span>")
     self.buttonpamac.connect("clicked", self.on_buttonpamac_clicked)
+    #self.rect = self.round_rectangle(0, 0, 0, 0, tags="button", radius=radius, fill=btnbackground)
     self.buttonpamac.set_size_request(420, 70)
 
     # grid.add(button1)
