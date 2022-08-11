@@ -62,7 +62,7 @@ class Main(Gtk.Window):
         t.start()
 
     def on_buttonabout_clicked(self, widget):
-        os.system('python3 /home/Projects/Git/FreedomOS/freedomos-welcome/usr/share/freedomos-welcome/about.py')
+        os.system('python3 /usr/share/freedomos-welcome/about.py')
 
 
     def check_package_installed(self,package):
