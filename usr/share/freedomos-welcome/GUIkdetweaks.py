@@ -30,16 +30,6 @@ def GUI(self, Gtk, GdkPixbuf):
     self.vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=0)
     self.add(self.vbox)
 
-    hbox1 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox2 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox3 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox4 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox5 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox6 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox7 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox8 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-    hbox9 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-
     # vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
     # vbox2 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
 
@@ -52,6 +42,15 @@ def GUI(self, Gtk, GdkPixbuf):
     infoE.set_property("has-tooltip", True)
     infoE.connect("query-tooltip", self.tooltip_callback, "Conflicts Info")
 
+    hbox1 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox2 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox3 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox4 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox5 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox6 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox7 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox8 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+    hbox9 = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
 
 
     # ======================================================================
@@ -62,7 +61,7 @@ def GUI(self, Gtk, GdkPixbuf):
 
     label = Gtk.Label(xalign=0)
     label.set_markup(
-        "<big>About <b>FreedomOS Welcome</b></big>")
+        "<big><b>KDE Tweaks</b></big>")
     label.set_line_wrap(True)
 
     pixbuf = GdkPixbuf.Pixbuf().new_from_file_at_size(
@@ -77,17 +76,47 @@ def GUI(self, Gtk, GdkPixbuf):
     label_warning.set_justify(Gtk.Justification.CENTER)
     label_warning.set_line_wrap(True)
 
-    if username == user:
+### Tweaks
 
-        label2.set_markup(
-            "FreedomOS Welcome is built from <b>ArcoLinux Welcome App Version 22-05-12</b>.\n" +
-            "Authors (ArcoLinux Welcome): Brad Heffernan and Erik Dubois\n"  # noqa
-            "FreedomOS Welcome has been changed/ modified to suit the requirements of FreedomOS\n")
-    else:
-        label2.set_markup (
-            "FreedomOS Welcome is built from <b>ArcoLinux Welcome App Version 22-05-12</b>.\n" +
-            "Authors (ArcoLinux Welcome): Brad Heffernan and Erik Dubois\n"  # noqa
-            "FreedomOS Welcome has been changed/ modified to suit the requirements of FreedomOS\n")
+
+    button1 = Gtk.Button(label="")
+    button1_label = button1.get_child()
+    button1_label.set_markup("<span size='large'><b>Enable KDE Tiling</b></span>")
+    #button1.connect("clicked", self.on_gp_clicked)
+    button1.connect("clicked", self.on_enabletiling_clicked)
+    button1.set_size_request(0, 80)
+
+    button2 = Gtk.Button(label="")
+    button2_label = button2.get_child()
+    button2_label.set_markup("<span size='large'><b>Disable Kde Tiling</b></span>")
+    button2.connect("clicked", self.on_disabletiling_clicked)
+    button2.set_size_request(0, 80)
+
+    hbox2.pack_start(button1, True, True, 0)
+    hbox2.pack_start(button2, True, True, 0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     hbox4.set_center_widget(label2)
     hbox1.pack_start(label, False, False, 0)

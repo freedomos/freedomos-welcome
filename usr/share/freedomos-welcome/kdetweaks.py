@@ -6,7 +6,7 @@
 # =================================================================
 import gi
 import os
-import GUI
+import GUIkdetweaks as GUI
 import conflicts
 #import wnck
 import subprocess
@@ -24,7 +24,7 @@ REMOTE_SERVER = "www.google.com"
 
 class Main(Gtk.Window):
     def __init__(self):
-        super(Main, self).__init__(title="FreedomOS Welcome")
+        super(Main, self).__init__(title="KDE Tweaks")
         self.set_border_width(10)
         self.set_default_size(860, 250)
         self.set_icon_from_file(os.path.join(
@@ -44,30 +44,11 @@ class Main(Gtk.Window):
             t.daemon = True
             t.start()
 
-    def on_mirror_clicked(self, widget):
-     subprocess.Popen(["konsole -e bash update"], shell=True)
+    def on_enabletiling_clicked(self, widget):
+     subprocess.Popen(["/usr/local/bin/enable-tile"], shell=True)
 
-
-    def on_update_clicked(self, widget):
-        print("Clicked")
-
-    def on_ai_clicked(self, widget):
-        subprocess.Popen(["/usr/bin/calamares_polkit", "-d"], shell=False)
-
-
-
-    def on_gp_clicked(self, widget):
-        t = threading.Thread(target=self.run_app, args=(["/usr/bin/gparted"],))
-        t.daemon = True
-        t.start()
-
-    def on_buttonabout_clicked(self, widget):
-        os.system('python3 /usr/share/freedomos-welcome/about.py')
-
-    def on_buttonkdetweaks_clicked(self, widget):
-        os.system('python3 /mnt/Projects/FreedomOS/freedomos-welcome/usr/share/freedomos-welcome/kdetweaks.py')
-
-
+    def on_disabletiling_clicked(self, widget):
+     os.system('/usr/local/bin/disable-tile')
     def check_package_installed(self,package):
         try:
             subprocess.check_output("pacman -Qi " + package,shell=True,stderr=subprocess.STDOUT)
@@ -305,6 +286,10 @@ Do you want to install it?")
     #             self.results = False
     #     except:
     #         self.results = False
+
+
+
+
 
 
 if __name__ == "__main__":

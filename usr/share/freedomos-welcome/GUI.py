@@ -210,10 +210,16 @@ def GUI(self, Gtk, GdkPixbuf):
                     "https://github.com/freedomos")
     button4.set_size_request(180, 50)
 
+    button13 = Gtk.Button(label="KDE Tweaks")
+    button13.connect("clicked", self.on_buttonkdetweaks_clicked)
+
+    button13.set_size_request(180, 50)
+
     button5 = Gtk.Button(label="About")
     button5.connect("clicked", self.on_buttonabout_clicked)
 
     button5.set_size_request(180, 50)
+
 
     button6 = Gtk.Button(label="Wiki")
     button6.connect("clicked", self.on_link_clicked,
@@ -237,8 +243,10 @@ def GUI(self, Gtk, GdkPixbuf):
     hbox2.pack_start(button4, True, True, 0)
     hbox2.pack_start(button6, True, True, 0)
     hbox2.pack_start(button7, True, True, 0)
-    hbox2.pack_start(button70, True, True, 0)
+    #hbox2.pack_start(button70, True, True, 0)
+    hbox2.pack_start(button13, True, True, 0)
     hbox2.pack_start(button5, True, True, 0)
+
     #button8 = Gtk.Button(label="")
     #button8_label = button8.get_child()
     #button8_label.set_markup("<b>P-holder</b>")
@@ -279,6 +287,11 @@ def GUI(self, Gtk, GdkPixbuf):
     check.connect("toggled", self.statup_toggle)
     check.set_active(autostart)
     hbox3.pack_end(check, False, False, 0)
+
+    check = Gtk.CheckButton(label="Enable Tiling windows")
+    check.connect("toggled", self.statup_toggle)
+    check.set_active(autostart)
+    hbox3.pack_end(check, False, False, 1)
 
 
 
