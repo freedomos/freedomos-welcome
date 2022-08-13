@@ -288,10 +288,6 @@ def GUI(self, Gtk, GdkPixbuf):
     check.set_active(autostart)
     hbox3.pack_end(check, False, False, 0)
 
-    check = Gtk.CheckButton(label="Enable Tiling windows")
-    check.connect("toggled", self.statup_toggle)
-    check.set_active(autostart)
-    hbox3.pack_end(check, False, False, 1)
 
 
 

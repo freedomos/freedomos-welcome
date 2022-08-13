@@ -61,8 +61,17 @@ def GUI(self, Gtk, GdkPixbuf):
 
     label = Gtk.Label(xalign=0)
     label.set_markup(
-        "<big><b>KDE Tweaks</b></big>")
+        "<big><b>KDE Tweaks</b></big>\n"
+        "Enabling tiling will require a session restart")
     label.set_line_wrap(True)
+
+
+
+
+
+
+
+
 
     pixbuf = GdkPixbuf.Pixbuf().new_from_file_at_size(
         os.path.join(base_dir, 'images/FreedomOS-one-liner.png'), 145, 145)
