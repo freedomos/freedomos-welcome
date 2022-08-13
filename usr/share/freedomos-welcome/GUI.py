@@ -231,19 +231,16 @@ def GUI(self, Gtk, GdkPixbuf):
                     "https://sourceforge.net/p/freedomoslinux/discussion/")
     button7.set_size_request(180, 50)
 
-    button70 = Gtk.Button(label="Screen resolution")
+    button70 = Gtk.Button(label="FreedomOS Fixes")
     button70.set_size_request(180, 50)
-    button70.set_property("has-tooltip", True)
-    button70.connect("query-tooltip",
-                      self.tooltip_callback,
-                      "Launch Arandr")
-    button70.connect("clicked", self.on_buttonarandr_clicked)
+    button70.connect("clicked", self.on_buttonfixes_clicked)
+
 
     hbox2.pack_start(button3, True, True, 0)
     hbox2.pack_start(button4, True, True, 0)
     hbox2.pack_start(button6, True, True, 0)
     hbox2.pack_start(button7, True, True, 0)
-    #hbox2.pack_start(button70, True, True, 0)
+    hbox2.pack_start(button70, True, True, 0)
     hbox2.pack_start(button13, True, True, 0)
     hbox2.pack_start(button5, True, True, 0)
 
