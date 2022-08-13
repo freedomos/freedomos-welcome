@@ -65,7 +65,7 @@ class Main(Gtk.Window):
         os.system('python3 /usr/share/freedomos-welcome/about.py')
 
     def on_buttonkdetweaks_clicked(self, widget):
-        os.system('python3 /mnt/Projects/FreedomOS/freedomos-welcome/usr/share/freedomos-welcome/kdetweaks.py')
+        os.system('python3 /usr/share/freedomos-welcome/kdetweaks.py')
 
 
     def check_package_installed(self,package):
