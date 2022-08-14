@@ -134,7 +134,7 @@ def GUI(self, Gtk, GdkPixbuf):
     self.vbox.pack_start(hbox4, False, False, 7)  # welcome Label
     self.vbox.pack_start(hbox8, False, False, 7)  # warning Label
 
-    button12 = Gtk.Button(label="Exit")
+    button12 = Gtk.Button(label="Close")
     button12.set_size_request(200, 50)
     button12.connect("clicked", Gtk.main_quit)
     #button12.set_tooltip_markup("Quit the FreedomOS Welcome App")

@@ -62,13 +62,13 @@ def GUI(self, Gtk, GdkPixbuf):
     label = Gtk.Label(xalign=0)
     label.set_markup(
         "<big><b>KDE Default Shortcuts</b></big>\n"
-        "Open Settings:                        meta + s   \n"
+        "Open Settings:                       meta + s   \n"
         "Open file manager:              meta + e  \n"
         "Open Terminal (kitty):          meta + Enter \n"
-        "Close focused window:        meta + bkspace\n"
-        "Move Workspace left:          meta + left-arrow \n"
-        "Move workspace right:        meta + right-arrow\n"
-        "Firefox:                                       meta + w\n")
+        "Close focused window:       meta + bkspace\n"
+        "Move Workspace left:         meta + left-arrow \n"
+        "Move workspace right:       meta + right-arrow\n"
+        "KRunner:                                   alt + space\n")
     label.set_line_wrap(True)
 
 
@@ -130,7 +130,7 @@ def GUI(self, Gtk, GdkPixbuf):
     self.vbox.pack_start(hbox4, False, False, 7)  # welcome Label
     self.vbox.pack_start(hbox8, False, False, 7)  # warning Label
 
-    button12 = Gtk.Button(label="Exit")
+    button12 = Gtk.Button(label="Close")
     button12.set_size_request(200, 50)
     button12.connect("clicked", Gtk.main_quit)
     #button12.set_tooltip_markup("Quit the FreedomOS Welcome App")
