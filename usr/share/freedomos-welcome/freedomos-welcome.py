@@ -19,6 +19,7 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('Wnck', '3.0')
 from gi.repository import Gtk, GdkPixbuf, GLib, Wnck  # noqa
 
+
 REMOTE_SERVER = "www.google.com"
 
 
@@ -62,11 +63,13 @@ class Main(Gtk.Window):
         t.start()
 
     def on_buttonabout_clicked(self, widget):
-        os.system('python3 /usr/share/freedomos-welcome/about.py')
+        os.system('python3 pages/about/about.py')
 
     def on_buttonkdetweaks_clicked(self, widget):
-        os.system('python3 /usr/share/freedomos-welcome/kdetweaks.py')
+        os.system('python3 pages/tweaks/kdetweaks.py')
 
+    def on_shortcut_clicked(self, widget):
+        os.system('python3 pages/shortcuts/kdeshortcuts.py')
 
     def check_package_installed(self,package):
         try:
@@ -78,7 +81,7 @@ class Main(Gtk.Window):
             return False
 
     def on_buttonfixes_clicked(self,widget):
-        os.system('python3 /usr/share/freedomos-welcome/fixes.py')
+        os.system('python3 pages/fixes/fixes.py')
 
 
 
