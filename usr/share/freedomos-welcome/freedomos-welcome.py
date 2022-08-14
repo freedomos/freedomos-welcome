@@ -81,7 +81,7 @@ class Main(Gtk.Window):
             return False
 
     def on_buttonfixes_clicked(self,widget):
-        os.system('python3 pages/fixes/fixes.py')
+        os.system('python3 /usr/share/freedomos-welcome/pages/fixes/fixes.py')
 
 
 
