@@ -63,13 +63,13 @@ class Main(Gtk.Window):
         t.start()
 
     def on_buttonabout_clicked(self, widget):
-        os.system('python3 pages/about/about.py')
+        os.system('python3 /usr/share/freedomos-welcome/pages/about/about.py')
 
     def on_buttonkdetweaks_clicked(self, widget):
-        os.system('python3 pages/tweaks/kdetweaks.py')
+        os.system('python3 /usr/share/freedomos-welcome/pages/tweaks/kdetweaks.py')
 
     def on_shortcut_clicked(self, widget):
-        os.system('python3 pages/shortcuts/kdeshortcuts.py')
+        os.system('python3 /usr/share/freedomos-welcome/pages/shortcuts/kdeshortcuts.py')
 
     def check_package_installed(self,package):
         try:
