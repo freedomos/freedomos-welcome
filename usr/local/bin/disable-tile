@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+## This will disable the tiling kde plugin
+sed -i 's/bismuthEnabled=true/bismuthEnabled=false/g' ~/.config/kwinrc
