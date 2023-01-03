@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+cd /usr/share/freedomos-welcome/data
+
+FILE=~/.config/autostart/FreedomOS-welcome.desktop
+if [ -f "$FILE" ]; then
+    rm -rf $FILE
+    python disable.py
+
+else
+    cp FreedomOS-welcome.desktop ~/.config/autostart/
+    python enable.py
+fi

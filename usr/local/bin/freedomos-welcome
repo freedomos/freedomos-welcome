@@ -1,2 +1,11 @@
 #!/usr/bin/env bash
-python3 /usr/share/freedomos-welcome/freedomos-welcome.py
+
+username=$(whoami)
+
+if [ $username = 'live' ]; then
+    python /usr/share/freedomos-welcome/installmain.py
+
+else
+    python /usr/share/freedomos-welcome/main.py
+
+fi

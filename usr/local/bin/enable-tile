@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-## This will enable the tiling kde plugin
-
-
-sed -i 's/bismuthEnabled=false/bismuthEnabled=true/g' ~/.config/kwinrc
