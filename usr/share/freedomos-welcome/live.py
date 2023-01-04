@@ -19,6 +19,7 @@ class WelcomeScreen(QDialog):
         self.close.clicked.connect(self.Quit)
         self.install.clicked.connect(self.Installer)
         self.update.clicked.connect(self.StartUpdate)
+        self.gpgfix.clicked.connect(self.Gpgfix)
 
         self.installguide.clicked.connect(lambda:self.OpenW('https://freedomos-docs.readthedocs.io/en/latest/Install.html'))
 
@@ -29,7 +30,8 @@ class WelcomeScreen(QDialog):
     def Installer(self):
         sb.Popen(["/usr/bin/calamares_polkit", "-d"], shell=False)
 
-
+    def Gpgfix(self):
+        sb.Popen("kitty /usr/local/bin/gpgfix", shell=True)
 
 
 

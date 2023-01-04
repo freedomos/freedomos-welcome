@@ -88,8 +88,16 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;
-</string>
+    <string notr="true">QPushButton {
+
+	border: 1px solid;
+	border-radius: 20px;
+
+}
+QPushButton:hover
+{
+	border: 4px solid rgb(160, 32, 240);
+}</string>
    </property>
    <property name="text">
     <string>Close</string>
@@ -98,8 +106,8 @@
   <widget class="QPushButton" name="install">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>280</y>
+     <x>30</x>
+     <y>240</y>
      <width>201</width>
      <height>61</height>
     </rect>
@@ -131,8 +139,8 @@ QPushButton:hover
   <widget class="QPushButton" name="installguide">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>280</y>
+     <x>300</x>
+     <y>240</y>
      <width>201</width>
      <height>61</height>
     </rect>
@@ -164,8 +172,8 @@ QPushButton:hover
   <widget class="QPushButton" name="update">
    <property name="geometry">
     <rect>
-     <x>660</x>
-     <y>280</y>
+     <x>560</x>
+     <y>240</y>
      <width>201</width>
      <height>61</height>
     </rect>
@@ -218,6 +226,39 @@ QPushButton:hover
    </property>
    <property name="text">
     <string>Welcome to the Freedom OS live installer. </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="gpgfix">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>240</y>
+     <width>201</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu Nerd Font</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+
+	border: 1px solid;
+	border-radius: 20px;
+
+}
+QPushButton:hover
+{
+	border: 4px solid rgb(160, 32, 240);
+}</string>
+   </property>
+   <property name="text">
+    <string>Fix Keyring</string>
    </property>
   </widget>
  </widget>
