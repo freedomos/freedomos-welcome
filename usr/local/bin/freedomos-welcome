@@ -2,10 +2,12 @@
 
 username=$(whoami)
 
+cd /usr/share/freedomos-welcome/
+
 if [ $username = 'live' ]; then
-    python /usr/share/freedomos-welcome/installmain.py
+    python installmain.py
 
 else
-    python /usr/share/freedomos-welcome/main.py
+    python main.py
 
 fi
