@@ -7,6 +7,7 @@ import webbrowser
 import os
 import subprocess as sb
 
+
 def run(command):
     sb.run(command, shell=True)
 
@@ -64,7 +65,7 @@ class WelcomeScreen(QDialog):
         sb.Popen(["/usr/share/freedomos-welcome/data/startup"], shell=False)
 
     def Gpgfix(self):
-        sb.Popen("gpgfix", shell=True)
+        sb.Popen("kitty /usr/local/bin/gpgfix", shell=True)
 
 
 app = QApplication(sys.argv)
