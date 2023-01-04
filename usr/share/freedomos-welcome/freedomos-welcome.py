@@ -13,7 +13,7 @@ def run(command):
 class WelcomeScreen(QDialog):
     def __init__(self):
         super(WelcomeScreen, self).__init__()
-        loadUi("main.ui",self)
+        loadUi("freedomos-welcome.ui",self)
         self.close.clicked.connect(self.Quit)
         #self.setup.clicked.connect(self.StartInstall)
         self.sysupdate.clicked.connect(self.StartUpdate)

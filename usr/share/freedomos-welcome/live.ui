@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1072</width>
-    <height>729</height>
+    <height>400</height>
    </rect>
   </property>
   <property name="font">
@@ -81,8 +81,8 @@
   <widget class="QPushButton" name="close">
    <property name="geometry">
     <rect>
-     <x>970</x>
-     <y>690</y>
+     <x>960</x>
+     <y>340</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -98,8 +98,8 @@
   <widget class="QPushButton" name="install">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>160</y>
+     <x>100</x>
+     <y>280</y>
      <width>201</width>
      <height>61</height>
     </rect>
@@ -113,8 +113,16 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white;
-</string>
+    <string notr="true">QPushButton {
+
+	border: 1px solid;
+	border-radius: 20px;
+
+}
+QPushButton:hover
+{
+	border: 4px solid rgb(160, 32, 240);
+}</string>
    </property>
    <property name="text">
     <string>Start Installer</string>
@@ -123,8 +131,8 @@
   <widget class="QPushButton" name="installguide">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>230</y>
+     <x>390</x>
+     <y>280</y>
      <width>201</width>
      <height>61</height>
     </rect>
@@ -138,17 +146,26 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white</string>
+    <string notr="true">QPushButton {
+
+	border: 1px solid;
+	border-radius: 20px;
+
+}
+QPushButton:hover
+{
+	border: 4px solid rgb(160, 32, 240);
+}</string>
    </property>
    <property name="text">
     <string>Install Guide</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="sysupdate">
+  <widget class="QPushButton" name="update">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>300</y>
+     <x>660</x>
+     <y>280</y>
      <width>201</width>
      <height>61</height>
     </rect>
@@ -162,7 +179,16 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:white</string>
+    <string notr="true">QPushButton {
+
+	border: 1px solid;
+	border-radius: 20px;
+
+}
+QPushButton:hover
+{
+	border: 4px solid rgb(160, 32, 240);
+}</string>
    </property>
    <property name="text">
     <string>Update System</string>
@@ -179,6 +205,19 @@
    </property>
    <property name="text">
     <string>Username: live                  Password: live</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>90</y>
+     <width>701</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Welcome to the Freedom OS live installer. </string>
    </property>
   </widget>
  </widget>

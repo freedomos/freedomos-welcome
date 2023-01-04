@@ -5,9 +5,9 @@ username=$(whoami)
 cd /usr/share/freedomos-welcome/
 
 if [ $username = 'live' ]; then
-    python installmain.py
+    python live.py
 
 else
-    python main.py
+    python freedomos-welcome.py
 
 fi
