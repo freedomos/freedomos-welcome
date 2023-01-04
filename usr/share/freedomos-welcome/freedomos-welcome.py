@@ -35,7 +35,7 @@ class WelcomeScreen(QDialog):
         self.website.clicked.connect(lambda:self.OpenW('https://freedomos.github.io'))
         self.news.clicked.connect(lambda:self.OpenW('https://github.com/freedomos'))
         self.betatesting.clicked.connect(lambda:self.OpenW('https://sourceforge.net/p/freedomoslinux/discussion/beta/'))
-        self.donate.clicked.connect(lambda:self.OpenW('https://freedomos.co.uk/donate'))
+        self.donate.clicked.connect(lambda:self.OpenW('https://freedomos.github.io'))
 
 
     
